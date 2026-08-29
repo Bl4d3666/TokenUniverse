@@ -73,6 +73,8 @@ type
     MenuStackTraces: TMenuItem;
     cmProcesses: TMenuItem;
     cmActivatePackage: TMenuItem;
+    cmLoadProfile: TMenuItem;
+    cmUnloadProfile: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure ActionDuplicate(Sender: TObject);
     procedure ActionClose(Sender: TObject);
@@ -124,6 +126,8 @@ type
     procedure MenuStackTracesClick(Sender: TObject);
     procedure cmProcessesClick(Sender: TObject);
     procedure cmActivatePackageClick(Sender: TObject);
+    procedure cmLoadProfileClick(Sender: TObject);
+    procedure cmUnloadProfileClick(Sender: TObject);
   end;
 
 var
@@ -143,7 +147,7 @@ uses
   NtUtils.Processes, NtUtils.Objects, TU.Startup, NtUiCommon.Prototypes,
   UI.Modal.PickToken, UI.New.UserManager, NtUiLib.Errors.Dialog,
   DelphiUiLib.LiteReflection.Types, NtUtils.Processes.Info, NtUtils.Console,
-  UI.Packages.Activate;
+  UI.Packages.Activate, TU.Profiles;
 
 {$R *.dfm}
 
@@ -383,6 +387,11 @@ begin
   ShowSuccessMessage(Handle, 'The token was successfully assigned to the current thread.');
 end;
 
+procedure TFormMain.cmLoadProfileClick;
+begin
+  TuUiLoadProfile(Handle, TokenView.Selected);
+end;
+
 procedure TFormMain.cmPipeLoopbackTokenClick(Sender: TObject);
 var
   Token: IToken;
@@ -399,6 +408,11 @@ end;
 procedure TFormMain.cmUmgrTokensClick;
 begin
   TUserManagerTokens.Create(Self, cfmDesktop).Show;
+end;
+
+procedure TFormMain.cmUnloadProfileClick(Sender: TObject);
+begin
+  TuUiUnloadProfile(Handle, TokenView.Selected);
 end;
 
 procedure TFormMain.CurrentUserChanged;

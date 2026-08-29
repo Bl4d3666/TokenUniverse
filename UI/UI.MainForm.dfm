@@ -286,6 +286,14 @@ object FormMain: TFormMain
       ShortCut = 16453
       OnClick = ActionRunWithToken
     end
+    object cmLoadProfile: TMenuItem
+      Caption = 'Load user profile'
+      OnClick = cmLoadProfileClick
+    end
+    object cmUnloadProfile: TMenuItem
+      Caption = 'Unload user profile'
+      OnClick = cmUnloadProfileClick
+    end
   end
   object SmallIcons: TImageList
     ColorDepth = cd32Bit

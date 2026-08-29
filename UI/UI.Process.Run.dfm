@@ -181,9 +181,9 @@ object DialogRun: TDialogRun
         Height = 21
         Style = csDropDownList
         Anchors = [akLeft, akTop, akRight]
-        ItemIndex = 0
+        ItemIndex = 1
         TabOrder = 4
-        Text = 'Default'
+        Text = 'Logon with profile'
         Items.Strings = (
           'Default'
           'Logon with profile'

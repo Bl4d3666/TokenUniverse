@@ -100,7 +100,8 @@ uses
   NtUtilsUI.Processes in 'NtUtilsUI\Components\NtUtilsUI.Processes.pas' {UiLibProcesses: TFrame},
   NtUtilsUI.Processes.Threads in 'NtUtilsUI\Components\NtUtilsUI.Processes.Threads.pas' {UiLibThreads: TFrame},
   UI.Packages.Activate in 'UI\UI.Packages.Activate.pas' {FormActivatePackage},
-  NtUtilsUI.UmgrContext in 'NtUtilsUI\Components\NtUtilsUI.UmgrContext.pas';
+  NtUtilsUI.UmgrContext in 'NtUtilsUI\Components\NtUtilsUI.UmgrContext.pas',
+  TU.Profiles in 'Core\TU.Profiles.pas';
 
 {$R *.res}
 {$WEAKLINKRTTI ON}
