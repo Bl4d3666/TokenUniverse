@@ -358,6 +358,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="NtUtilsUI\Components\NtUtilsUI.UmgrContext.pas"/>
+        <DCCReference Include="Core\TU.Profiles.pas"/>
         <None Include="TokenUniverse.todo"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
