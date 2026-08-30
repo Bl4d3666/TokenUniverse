@@ -11,7 +11,7 @@ uses
 
 type
   TAccessCheckForm = class(TUiLibChildForm)
-    PageControlModes: TPageControl;
+    PageControlModes: TUiLibPageControl;
     TabByName: TTabSheet;
     TabByPid: TTabSheet;
     lblNameType: TLabel;
@@ -61,8 +61,6 @@ type
     procedure tbxNameEnter(Sender: TObject);
     procedure btnSelectTidClick(Sender: TObject);
     procedure tbxTidChange(Sender: TObject);
-    procedure UiLibChildFormKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
   private
     FContext: TAccessContext;
     FNamespaceSuggestions: IAutoCompletionSuggestions;
@@ -276,13 +274,6 @@ begin
   end;
 
   ShowAccessMask(TuGetAccessCidObject(Tid, CidType));
-end;
-
-procedure TAccessCheckForm.UiLibChildFormKeyDown;
-begin
-  // Ctrl+Digit to switch between tabs
-  if (Shift = [ssCtrl]) and (Key >= Ord('1')) and (Key <= Ord('6')) then
-    PageControlModes.ActivePageIndex := Key - Ord('1');
 end;
 
 end.

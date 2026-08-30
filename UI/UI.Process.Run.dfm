@@ -19,7 +19,7 @@ object DialogRun: TDialogRun
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   TextHeight = 13
-  object PageControl: TPageControl
+  object PageControl: TUiLibPageControl
     AlignWithMargins = True
     Left = 3
     Top = 52

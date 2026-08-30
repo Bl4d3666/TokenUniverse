@@ -13,7 +13,7 @@ uses
 
 type
   TInfoDialog = class(TUiLibChildForm)
-    PageControl: TPageControl;
+    PageControl: TUiLibPageControl;
     TabGeneral: TTabSheet;
     TabGroups: TTabSheet;
     TabPrivileges: TTabSheet;

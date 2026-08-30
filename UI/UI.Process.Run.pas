@@ -12,7 +12,7 @@ uses
 
 type
   TDialogRun = class(TUiLibChildForm)
-    PageControl: TPageControl;
+    PageControl: TUiLibPageControl;
     TabParams: TTabSheet;
     EditExe: TLabeledEdit;
     ButtonBrowse: TButton;
@@ -408,10 +408,6 @@ end;
 
 procedure TDialogRun.FormKeyDown;
 begin
-  // Ctrl+N to switch between tabs
-  if (Shift = [ssCtrl]) and (Key >= Ord('1')) and (Key <= Ord('4')) then
-    PageControl.ActivePageIndex := Key - Ord('1');
-
   // Ctrl+O to choose a file
   if (Shift = [ssCtrl]) and (Key = Ord('O')) then
     ButtonBrowse.Click;

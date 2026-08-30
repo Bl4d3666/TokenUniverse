@@ -13,7 +13,7 @@ type
   TDialogCreateToken = class(TUiLibChildForm)
     ButtonOK: TButton;
     ButtonCancel: TButton;
-    PageControl: TPageControl;
+    PageControl: TUiLibPageControl;
     TabGeneral: TTabSheet;
     TabGroups: TTabSheet;
     TabPrivileges: TTabSheet;

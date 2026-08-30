@@ -7,7 +7,7 @@ uses
   Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, Vcl.ComCtrls,
   NtUtilsUI.ListView, NtUtilsUI, UI.Prototypes.Groups, NtUtils.Security.Sid,
   Ntapi.WinNt, Ntapi.ntseapi, NtUtils, TU.Tokens, NtUtilsUI.Base,
-  NtUtilsUI.Privileges;
+  NtUtilsUI.Privileges, NtUtilsUI.StdCtrls;
 
 type
   TDialogRestrictToken = class(TUiLibChildForm)
@@ -17,7 +17,7 @@ type
     CheckBoxWriteOnly: TCheckBox;
     ButtonOK: TButton;
     ButtonCancel: TButton;
-    PageControl1: TPageControl;
+    PageControl1: TUiLibPageControl;
     TabSheetSidDisable: TTabSheet;
     TabSheetSidRestrict: TTabSheet;
     TabSheetPrivDelete: TTabSheet;

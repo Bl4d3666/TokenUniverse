@@ -12,9 +12,8 @@ object AccessCheckForm: TAccessCheckForm
   Font.Style = []
   KeyPreview = True
   OnCreate = FormCreate
-  OnKeyDown = UiLibChildFormKeyDown
   TextHeight = 13
-  object PageControlModes: TPageControl
+  object PageControlModes: TUiLibPageControl
     AlignWithMargins = True
     Left = 3
     Top = 3

@@ -41,7 +41,7 @@ object DialogCreateToken: TDialogCreateToken
     TabOrder = 3
     OnClick = ButtonCancelClick
   end
-  object PageControl: TPageControl
+  object PageControl: TUiLibPageControl
     AlignWithMargins = True
     Left = 3
     Top = 3

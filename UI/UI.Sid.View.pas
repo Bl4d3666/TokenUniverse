@@ -10,7 +10,7 @@ uses
 
 type
   TDialogSidView = class(TUiLibChildForm)
-    Pages: TPageControl;
+    Pages: TUiLibPageControl;
     TabSid: TTabSheet;
     TabDomain: TTabSheet;
     TabGroup: TTabSheet;

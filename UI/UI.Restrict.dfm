@@ -38,7 +38,7 @@ object DialogRestrictToken: TDialogRestrictToken
     TabOrder = 1
     OnClick = DoCloseForm
   end
-  object PageControl1: TPageControl
+  object PageControl1: TUiLibPageControl
     Left = 4
     Top = 6
     Width = 390

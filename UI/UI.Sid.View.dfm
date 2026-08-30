@@ -14,7 +14,7 @@ object DialogSidView: TDialogSidView
   Position = poOwnerFormCenter
   ShowHint = True
   TextHeight = 13
-  object Pages: TPageControl
+  object Pages: TUiLibPageControl
     AlignWithMargins = True
     Left = 3
     Top = 3
